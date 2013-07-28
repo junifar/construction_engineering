@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id = "construction_engineering_rab_tree_view">
+			<field name="name">construction.engineering.rab.tree</field>
+			<field name="model">construction.engineering.rab</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Construction Engineering RAB Tree">
+					<field name="rab_number"/>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="construction_engineering_rab_form_view">
+			<field name="name">construction.engineering.rab.form</field>
+			<field name="model">construction.engineering.rab</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string = "construction Engineering RAB form">
+					<group colspan="2" string="Main Info">
+						<field name="rab_number" colspan='2'/>
+						<field name="name" colspan='2'/>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="construction_engineering_rab_list_action">
+			<field name="name">Rancangan Anggaran Biaya</field>
+			<field name="res_model">construction.engineering.rab</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="construction_engineering_menu" name="Engineering"/>
+		<menuitem id="construction_engineering_sub_menu" name="Engineering" parent="construction_engineering_menu"/>
+		<menuitem id="construction_engineering_rab_menu" name="RAB" parent="construction_engineering_sub_menu" action="construction_engineering_rab_list_action"/>
+	</data>
+</openerp>

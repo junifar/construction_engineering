@@ -3,7 +3,7 @@
     "version" : "1.1",
     "author" : "Junifar",
     "category" : "Construction Engineerin Modules",
-    "depends" : ["base"],
+    "depends" : ["base","process"],
 	"description" : """xXx""",
     "init_xml" : [],
     "demo_xml" : [],
